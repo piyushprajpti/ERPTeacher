@@ -9,10 +9,12 @@ import com.piyushprajpti.feature.auth.login.LoginViewModel
 import com.piyushprajpti.feature.auth.tenant.TenantViewModel
 import com.piyushprajpti.feature.common.reset_password.ResetPasswordViewModel
 import com.piyushprajpti.feature.common.support.SupportViewModel
+import com.piyushprajpti.feature.exam.ExamScheduleViewModel
 import com.piyushprajpti.feature.home.notifications.NotificationViewModel
 import com.piyushprajpti.feature.home.root.HomeViewModel
 import com.piyushprajpti.feature.leave.leave_apply.MyLeaveApplyViewModel
 import com.piyushprajpti.feature.my_leave.balance.MyLeaveBalanceViewModel
+import com.piyushprajpti.feature.result.ResultViewModel
 import com.piyushprajpti.feature.schedule.ScheduleViewModel
 import com.piyushprajpti.feature.settings.change_password.ChangePasswordViewModel
 import com.piyushprajpti.feature.settings.profile.ProfileViewModel
@@ -58,4 +60,9 @@ val featureModule = module {
     viewModelOf(::MyLeaveBalanceViewModel)
     viewModelOf(::MyLeaveApplyViewModel)
 
+    // exam
+    viewModelOf(::ExamScheduleViewModel)
+
+    // result
+    viewModelOf(::ResultViewModel)
 }

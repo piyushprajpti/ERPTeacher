@@ -70,7 +70,7 @@ enum class QuickAction(
     MyLeaves("My Leaves", Icons.AutoMirrored.Outlined.ExitToApp, NavRoutes.MyLeaveBalance),
     StudentLeaves("Student Leaves", Icons.AutoMirrored.Outlined.ExitToApp, NavRoutes.StudentLeaveDashboard),
     Exam("Exam", Icons.Outlined.HistoryEdu, NavRoutes.ExamSchedule),
-    Result("Result", Icons.Outlined.Grade, NavRoutes.MarksOverview),
+    Result("Result", Icons.Outlined.Grade, NavRoutes.Result),
     Syllabus("Syllabus", Icons.Outlined.Description, NavRoutes.DocumentList),
     Event("Event", Icons.Outlined.Event, NavRoutes.EventDashboard)
 }

@@ -29,6 +29,7 @@ sealed interface NavRoutes : NavKey {
     // attendance
     @Serializable
     data object AttendanceDashboard : NavRoutes, NavKey
+
     @Serializable
     data object AttendanceMark : NavRoutes, NavKey
 
@@ -54,6 +55,7 @@ sealed interface NavRoutes : NavKey {
     // my leave
     @Serializable
     data object MyLeaveBalance : NavRoutes, NavKey
+
     @Serializable
     data object MyLeaveApply : NavRoutes, NavKey
 
@@ -67,8 +69,19 @@ sealed interface NavRoutes : NavKey {
 
     @Serializable
     data object AssignmentSubmission : NavRoutes, NavKey
+
     @Serializable
     data object AssignmentCreate : NavRoutes, NavKey
+
+    // exam
+    @Serializable
+    data object ExamSchedule : NavRoutes, NavKey
+
+    // result
+    @Serializable
+    data object Result : NavRoutes, NavKey
+
+
 
 
 
@@ -110,10 +123,6 @@ sealed interface NavRoutes : NavKey {
     @Serializable
     data object GradeCard : NavRoutes, NavKey
 
-    // exam
-    @Serializable
-    data object ExamSchedule : NavRoutes, NavKey
-
     @Serializable
     data object ExamHallTicket : NavRoutes, NavKey
 
@@ -136,7 +145,6 @@ sealed interface NavRoutes : NavKey {
 
     @Serializable
     data object EventDetail : NavRoutes, NavKey
-
 
 
     // transport

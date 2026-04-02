@@ -28,8 +28,10 @@ import com.piyushprajpti.feature.assignment.assignmentEntryProvider
 import com.piyushprajpti.feature.attendance.attendanceEntryProvider
 import com.piyushprajpti.feature.auth.authEntryProvider
 import com.piyushprajpti.feature.common.commonEntryProvider
+import com.piyushprajpti.feature.exam.examEntryProvider
 import com.piyushprajpti.feature.home.homeEntryProvider
 import com.piyushprajpti.feature.my_leave.myLeaveEntryProvider
+import com.piyushprajpti.feature.result.resultEntryProvider
 import com.piyushprajpti.feature.schedule.scheduleEntryProvider
 import com.piyushprajpti.feature.settings.settingsEntryProvider
 import com.piyushprajpti.feature.student_leave.studentLeaveEntryProvider
@@ -75,6 +77,8 @@ fun Navigation(authState: AuthState) {
             ::assignmentEntryProvider,
             ::studentLeaveEntryProvider,
             ::myLeaveEntryProvider,
+            ::examEntryProvider,
+            ::resultEntryProvider,
 
             )
     }
