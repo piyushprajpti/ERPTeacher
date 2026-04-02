@@ -29,8 +29,10 @@ import com.piyushprajpti.feature.attendance.attendanceEntryProvider
 import com.piyushprajpti.feature.auth.authEntryProvider
 import com.piyushprajpti.feature.common.commonEntryProvider
 import com.piyushprajpti.feature.home.homeEntryProvider
+import com.piyushprajpti.feature.my_leave.myLeaveEntryProvider
 import com.piyushprajpti.feature.schedule.scheduleEntryProvider
 import com.piyushprajpti.feature.settings.settingsEntryProvider
+import com.piyushprajpti.feature.student_leave.studentLeaveEntryProvider
 
 @Composable
 fun Navigation(authState: AuthState) {
@@ -71,6 +73,8 @@ fun Navigation(authState: AuthState) {
             ::attendanceEntryProvider,
             ::scheduleEntryProvider,
             ::assignmentEntryProvider,
+            ::studentLeaveEntryProvider,
+            ::myLeaveEntryProvider,
 
             )
     }

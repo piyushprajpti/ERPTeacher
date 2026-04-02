@@ -1,5 +1,6 @@
 package com.piyushprajpti.erpteacher
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.CircularProgressIndicator
@@ -11,11 +12,14 @@ import com.piyushprajpti.college_erp_system.theme.CustomTheme
 @Composable
 fun SplashScreen() {
     Box(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .background(CustomTheme.colors.primaryBackground),
         contentAlignment = Alignment.Center
     ) {
         CircularProgressIndicator(
-            trackColor = CustomTheme.colors.primary
+            trackColor = CustomTheme.colors.primary,
+            color = CustomTheme.colors.secondaryBackground
         )
     }
 }

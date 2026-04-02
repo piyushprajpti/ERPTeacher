@@ -11,10 +11,13 @@ import com.piyushprajpti.feature.common.reset_password.ResetPasswordViewModel
 import com.piyushprajpti.feature.common.support.SupportViewModel
 import com.piyushprajpti.feature.home.notifications.NotificationViewModel
 import com.piyushprajpti.feature.home.root.HomeViewModel
+import com.piyushprajpti.feature.leave.leave_apply.MyLeaveApplyViewModel
+import com.piyushprajpti.feature.my_leave.balance.MyLeaveBalanceViewModel
 import com.piyushprajpti.feature.schedule.ScheduleViewModel
 import com.piyushprajpti.feature.settings.change_password.ChangePasswordViewModel
 import com.piyushprajpti.feature.settings.profile.ProfileViewModel
 import com.piyushprajpti.feature.settings.root.SettingsViewModel
+import com.piyushprajpti.feature.student_leave.dashboard.StudentLeaveDashboardViewModel
 import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.module
 
@@ -47,5 +50,12 @@ val featureModule = module {
     viewModelOf(::AssignmentListViewModel)
     viewModelOf(::AssignmentSubmissionViewModel)
     viewModelOf(::AssignmentCreateViewModel)
+
+    // student leave
+    viewModelOf(::StudentLeaveDashboardViewModel)
+
+    // my leave
+    viewModelOf(::MyLeaveBalanceViewModel)
+    viewModelOf(::MyLeaveApplyViewModel)
 
 }
