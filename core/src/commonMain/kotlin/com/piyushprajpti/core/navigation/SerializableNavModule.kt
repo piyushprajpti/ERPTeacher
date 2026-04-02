@@ -40,7 +40,13 @@ val serializableNavModule = SerializersModule {
         subclass(NavRoutes.MyLeaveApply::class, NavRoutes.MyLeaveApply.serializer())
 
         // student leave
-        subclass(NavRoutes.StudentLeaveDashboard::class, NavRoutes.StudentLeaveDashboard.serializer())
+        subclass(NavRoutes.StudentLeaveDashboard::class,NavRoutes.StudentLeaveDashboard.serializer())
+
+        // assignment
+        subclass(NavRoutes.AssignmentList::class, NavRoutes.AssignmentList.serializer())
+        subclass(NavRoutes.AssignmentSubmission::class, NavRoutes.AssignmentSubmission.serializer())
+        subclass(NavRoutes.AssignmentCreate::class, NavRoutes.AssignmentCreate.serializer())
+
 
         // fees
         subclass(NavRoutes.FeesSummary::class, NavRoutes.FeesSummary.serializer())
@@ -75,9 +81,6 @@ val serializableNavModule = SerializersModule {
         subclass(NavRoutes.EventDashboard::class, NavRoutes.EventDashboard.serializer())
         subclass(NavRoutes.EventDetail::class, NavRoutes.EventDetail.serializer())
 
-        // assignment
-        subclass(NavRoutes.AssignmentDashboard::class, NavRoutes.AssignmentDashboard.serializer())
-        subclass(NavRoutes.AssignmentSubmit::class, NavRoutes.AssignmentSubmit.serializer())
 
         // transport
         subclass(NavRoutes.TransportDashboard::class, NavRoutes.TransportDashboard.serializer())

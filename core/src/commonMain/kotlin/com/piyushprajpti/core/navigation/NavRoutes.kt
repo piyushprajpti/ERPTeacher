@@ -61,6 +61,16 @@ sealed interface NavRoutes : NavKey {
     @Serializable
     data object StudentLeaveDashboard : NavRoutes, NavKey
 
+    // assignment
+    @Serializable
+    data object AssignmentList : NavRoutes, NavKey
+
+    @Serializable
+    data object AssignmentSubmission : NavRoutes, NavKey
+    @Serializable
+    data object AssignmentCreate : NavRoutes, NavKey
+
+
 
     // fees
     @Serializable
@@ -127,12 +137,7 @@ sealed interface NavRoutes : NavKey {
     @Serializable
     data object EventDetail : NavRoutes, NavKey
 
-    // assignment
-    @Serializable
-    data object AssignmentDashboard : NavRoutes, NavKey
 
-    @Serializable
-    data object AssignmentSubmit : NavRoutes, NavKey
 
     // transport
     @Serializable

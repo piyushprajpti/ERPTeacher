@@ -66,7 +66,7 @@ enum class QuickAction(
     val icon: androidx.compose.ui.graphics.vector.ImageVector,
     val route: NavRoutes
 ) {
-    Assignment("Assignment", Icons.AutoMirrored.Outlined.Assignment, NavRoutes.AssignmentDashboard),
+    Assignment("Assignment", Icons.AutoMirrored.Outlined.Assignment, NavRoutes.AssignmentList),
     MyLeaves("My Leaves", Icons.AutoMirrored.Outlined.ExitToApp, NavRoutes.MyLeaveBalance),
     StudentLeaves("Student Leaves", Icons.AutoMirrored.Outlined.ExitToApp, NavRoutes.StudentLeaveDashboard),
     Exam("Exam", Icons.Outlined.HistoryEdu, NavRoutes.ExamSchedule),

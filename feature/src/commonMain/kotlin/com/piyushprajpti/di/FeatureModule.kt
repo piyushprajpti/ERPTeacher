@@ -1,5 +1,8 @@
 package com.piyushprajpti.di
 
+import com.piyushprajpti.feature.assignment.create.AssignmentCreateViewModel
+import com.piyushprajpti.feature.assignment.list.AssignmentListViewModel
+import com.piyushprajpti.feature.assignment.submission.AssignmentSubmissionViewModel
 import com.piyushprajpti.feature.attendance.dashboard.AttendanceDashboardViewModel
 import com.piyushprajpti.feature.attendance.mark.AttendanceMarkViewModel
 import com.piyushprajpti.feature.auth.login.LoginViewModel
@@ -39,4 +42,10 @@ val featureModule = module {
 
     // schedule
     viewModelOf(::ScheduleViewModel)
+
+    // assignment
+    viewModelOf(::AssignmentListViewModel)
+    viewModelOf(::AssignmentSubmissionViewModel)
+    viewModelOf(::AssignmentCreateViewModel)
+
 }

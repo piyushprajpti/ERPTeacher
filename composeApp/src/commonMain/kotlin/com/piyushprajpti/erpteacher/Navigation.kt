@@ -24,6 +24,7 @@ import com.piyushprajpti.components.FloatingBottomBar
 import com.piyushprajpti.components.LocalBottomBarPadding
 import com.piyushprajpti.core.navigation.NavRoutes
 import com.piyushprajpti.core.navigation.serializableNavModule
+import com.piyushprajpti.feature.assignment.assignmentEntryProvider
 import com.piyushprajpti.feature.attendance.attendanceEntryProvider
 import com.piyushprajpti.feature.auth.authEntryProvider
 import com.piyushprajpti.feature.common.commonEntryProvider
@@ -69,6 +70,7 @@ fun Navigation(authState: AuthState) {
             ::homeEntryProvider,
             ::attendanceEntryProvider,
             ::scheduleEntryProvider,
+            ::assignmentEntryProvider,
 
             )
     }
