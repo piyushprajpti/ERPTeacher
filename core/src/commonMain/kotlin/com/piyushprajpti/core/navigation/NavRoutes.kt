@@ -51,12 +51,16 @@ sealed interface NavRoutes : NavKey {
     @Serializable
     data object Notifications : NavRoutes, NavKey
 
-    // leave
+    // my leave
     @Serializable
-    data object LeaveHistory : NavRoutes, NavKey
+    data object MyLeaveBalance : NavRoutes, NavKey
+    @Serializable
+    data object MyLeaveApply : NavRoutes, NavKey
 
+    // student leaves
     @Serializable
-    data object ApplyLeave : NavRoutes, NavKey
+    data object StudentLeaveDashboard : NavRoutes, NavKey
+
 
     // fees
     @Serializable

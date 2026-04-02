@@ -11,7 +11,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -19,6 +19,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.piyushprajpti.college_erp_system.theme.CustomTheme
@@ -29,7 +30,7 @@ fun QuickActionsGrid(
     actions: List<QuickAction>,
     onClick: (QuickAction) -> Unit
 ) {
-    val chunks = actions.chunked(5)
+    val chunks = actions.chunked(4)
     Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
         chunks.forEach { rowActions ->
             Row(
@@ -39,9 +40,9 @@ fun QuickActionsGrid(
                 rowActions.forEach { action ->
                     QuickActionItem(action, onClick = { onClick(action) })
                 }
-                if (rowActions.size < 5) {
-                    repeat(5 - rowActions.size) {
-                        Spacer(modifier = Modifier.width(64.dp))
+                if (rowActions.size < 4) {
+                    repeat(4 - rowActions.size) {
+                        Spacer(modifier = Modifier.width(70.dp))
                     }
                 }
             }
@@ -57,14 +58,14 @@ fun QuickActionItem(
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(8.dp),
-        modifier = Modifier.width(64.dp)
+        modifier = Modifier.width(70.dp)
     ) {
         Box(
             modifier = Modifier
-                .size(48.dp)
-                .clip(CircleShape)
+                .size(56.dp)
+                .clip(RoundedCornerShape(16.dp))
                 .background(CustomTheme.colors.secondaryBackground)
-                .border(1.dp, CustomTheme.colors.outline, CircleShape)
+                .border(0.5.dp, CustomTheme.colors.outline, RoundedCornerShape(16.dp))
                 .clickable { onClick() },
             contentAlignment = Alignment.Center
         ) {
@@ -72,14 +73,16 @@ fun QuickActionItem(
                 imageVector = action.icon,
                 contentDescription = action.title,
                 tint = CustomTheme.colors.primaryText,
-                modifier = Modifier.size(20.dp)
+                modifier = Modifier.size(24.dp)
             )
         }
         Text(
             text = action.title,
             color = CustomTheme.colors.secondaryText,
-            fontSize = 10.sp,
-            fontWeight = FontWeight.Medium
+            fontSize = 11.sp,
+            fontWeight = FontWeight.Medium,
+            textAlign = TextAlign.Center,
+            lineHeight = 14.sp
         )
     }
 }

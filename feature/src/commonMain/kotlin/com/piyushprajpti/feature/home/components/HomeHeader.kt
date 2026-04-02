@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material.icons.rounded.Notifications
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -42,25 +41,17 @@ fun HomeHeader(
         Row(verticalAlignment = Alignment.CenterVertically) {
             Box(
                 modifier = Modifier
-                    .size(48.dp)
+                    .size(56.dp)
                     .clip(CircleShape)
                     .background(CustomTheme.colors.secondaryBackground)
                     .border(1.dp, CustomTheme.colors.outline, CircleShape),
                 contentAlignment = Alignment.Center
             ) {
-                if (state.profilePictureUrl != null) {
-                    AsyncImage(
-                        model = state.profilePictureUrl,
-                        contentDescription = "Profile",
-                        contentScale = ContentScale.Crop
-                    )
-                } else {
-                    Icon(
-                        imageVector = Icons.Outlined.Person,
-                        contentDescription = null,
-                        tint = CustomTheme.colors.secondaryText
-                    )
-                }
+                AsyncImage(
+                    model = state.profilePictureUrl,
+                    contentDescription = "Profile",
+                    contentScale = ContentScale.Crop
+                )
             }
             Spacer(modifier = Modifier.width(12.dp))
             Column {
@@ -71,9 +62,9 @@ fun HomeHeader(
                     fontWeight = FontWeight.Bold
                 )
                 Text(
-                    text = state.currentDate,
+                    text = "${state.department} • ${state.currentDate}",
                     color = CustomTheme.colors.secondaryText,
-                    fontSize = 12.sp
+                    fontSize = 14.sp
                 )
             }
         }
@@ -81,15 +72,16 @@ fun HomeHeader(
         IconButton(
             onClick = onNotificationClick,
             modifier = Modifier
-                .size(40.dp)
+                .size(44.dp)
                 .clip(CircleShape)
                 .background(CustomTheme.colors.secondaryBackground)
+                .border(0.5.dp, CustomTheme.colors.outline, CircleShape)
         ) {
             Icon(
                 imageVector = Icons.Rounded.Notifications,
                 contentDescription = "Notifications",
                 tint = CustomTheme.colors.primaryText,
-                modifier = Modifier.size(20.dp)
+                modifier = Modifier.size(22.dp)
             )
         }
     }

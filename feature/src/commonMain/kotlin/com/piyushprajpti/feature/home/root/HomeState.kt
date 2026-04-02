@@ -3,83 +3,74 @@ package com.piyushprajpti.feature.home.root
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.Assignment
 import androidx.compose.material.icons.automirrored.outlined.ExitToApp
-import androidx.compose.material.icons.automirrored.outlined.LibraryBooks
 import androidx.compose.material.icons.outlined.Description
 import androidx.compose.material.icons.outlined.Event
 import androidx.compose.material.icons.outlined.Grade
 import androidx.compose.material.icons.outlined.HistoryEdu
-import androidx.compose.material.icons.outlined.HomeWork
-import androidx.compose.material.icons.outlined.Payments
-import androidx.compose.material.icons.outlined.School
-import androidx.compose.ui.graphics.vector.ImageVector
 import com.piyushprajpti.core.navigation.NavRoutes
 
 data class HomeState(
     val userName: String = "Arjun Mehta",
-    val profilePictureUrl: String? = null,
-    val currentDate: String = "Monday, 23rd October 2023",
-    val attendanceAlert: AttendanceAlert? = AttendanceAlert(
-        message = "Your OS attendance is 68%. Minimum 75% required.",
-        percentage = 68
-    ),
-    val nextClass: NextClass? = NextClass(
-        subject = "Data Structures",
-        professor = "Prof. Sharma",
-        startTime = "10:30 AM",
-        room = "Room 402",
-        startsInMinutes = 15
-    ),
-    val stats: HomeStats = HomeStats(
-        attendancePercentage = 86,
-        feesDue = 500,
-        booksCount = 5
-    ),
-    val todaySchedule: List<ScheduleItem> = listOf(
-        ScheduleItem("12:00 PM", "DBMS Theory", "Hall 301"),
-        ScheduleItem("02:00 PM", "Operating Systems", "Lab 1"),
-        ScheduleItem("04:00 PM", "Software Engineering Lab", "Lab 4")
-    ),
+    val department: String = "CS Dept",
+    val profilePictureUrl: String = "https://cdn-icons-png.flaticon.com/512/15297/15297661.png",
+    val currentDate: String = "Monday, Oct 23",
+    val pendingTasks: List<PendingTask> = emptyList(),
+    val todaySchedule: List<TeacherScheduleItem> = emptyList(),
+    val classesSummary: ClassesSummary = ClassesSummary(),
+    val attendanceAlert: AttendanceAlert? = null,
+    val nextClass: NextClass? = null,
     val isLoading: Boolean = false
 )
 
 data class AttendanceAlert(
-    val message: String,
-    val percentage: Int
+    val message: String
 )
 
 data class NextClass(
+    val startsInMinutes: Int,
     val subject: String,
     val professor: String,
     val startTime: String,
-    val room: String,
-    val startsInMinutes: Int
+    val room: String
 )
 
-data class HomeStats(
-    val attendancePercentage: Int,
-    val feesDue: Int,
-    val booksCount: Int
+data class PendingTask(
+    val title: String,
+    val count: Int,
+    val taskType: PendingTaskType
+)
+
+enum class PendingTaskType {
+    UNGRADED_ASSIGNMENTS,
+    LEAVE_APPLICATIONS
+}
+
+data class TeacherScheduleItem(
+    val subject: String,
+    val section: String,
+    val time: String,
+    val room: String,
+    val studentAvatars: List<String> = emptyList(),
+    val totalStudents: Int = 0,
+    val isAttendanceMarked: Boolean = false
+)
+
+data class ClassesSummary(
+    val activeClasses: Int = 0,
+    val subjects: Int = 0,
+    val totalStudents: Int = 0
 )
 
 enum class QuickAction(
     val title: String,
-    val icon: ImageVector,
+    val icon: androidx.compose.ui.graphics.vector.ImageVector,
     val route: NavRoutes
 ) {
-    Leave("Leave", Icons.AutoMirrored.Outlined.ExitToApp, NavRoutes.LeaveHistory),
-    Fees("Fees", Icons.Outlined.Payments, NavRoutes.FeesSummary),
-    Library("Library", Icons.AutoMirrored.Outlined.LibraryBooks, NavRoutes.LibraryDashboard),
-    Documents("Documents", Icons.Outlined.Description, NavRoutes.DocumentList),
-    Marks("Marks", Icons.Outlined.Grade, NavRoutes.MarksOverview),
-    Exam("Exam", Icons.Outlined.HistoryEdu, NavRoutes.ExamSchedule),
-    Hostel("Hostel", Icons.Outlined.HomeWork, NavRoutes.HostelDashboard),
-    Events("Events", Icons.Outlined.Event, NavRoutes.EventDashboard),
     Assignment("Assignment", Icons.AutoMirrored.Outlined.Assignment, NavRoutes.AssignmentDashboard),
-    Transport("Transport", Icons.Outlined.School, NavRoutes.TransportDashboard)
+    MyLeaves("My Leaves", Icons.AutoMirrored.Outlined.ExitToApp, NavRoutes.MyLeaveBalance),
+    StudentLeaves("Student Leaves", Icons.AutoMirrored.Outlined.ExitToApp, NavRoutes.StudentLeaveDashboard),
+    Exam("Exam", Icons.Outlined.HistoryEdu, NavRoutes.ExamSchedule),
+    Result("Result", Icons.Outlined.Grade, NavRoutes.MarksOverview),
+    Syllabus("Syllabus", Icons.Outlined.Description, NavRoutes.DocumentList),
+    Event("Event", Icons.Outlined.Event, NavRoutes.EventDashboard)
 }
-
-data class ScheduleItem(
-    val time: String,
-    val subject: String,
-    val location: String
-)
