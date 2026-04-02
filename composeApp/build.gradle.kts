@@ -1,4 +1,3 @@
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -33,6 +32,7 @@ kotlin {
             implementation(libs.compose.uiToolingPreview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.koin.android)
+            implementation(libs.androidx.core.splashscreen)
         }
         commonMain.dependencies {
             implementation(libs.compose.runtime)
@@ -109,4 +109,3 @@ dependencies {
 room {
     schemaDirectory("$projectDir/schemas")
 }
-
