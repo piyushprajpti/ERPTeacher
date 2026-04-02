@@ -19,11 +19,16 @@ val serializableNavModule = SerializersModule {
 
         // main tabs
         subclass(NavRoutes.Home::class, NavRoutes.Home.serializer())
-        subclass(NavRoutes.Attendance::class, NavRoutes.Attendance.serializer())
+
+        // attendance
+        subclass(NavRoutes.AttendanceDashboard::class, NavRoutes.AttendanceDashboard.serializer())
+        subclass(NavRoutes.AttendanceMark::class, NavRoutes.AttendanceMark.serializer())
+
+        // schedule
         subclass(NavRoutes.Schedule::class, NavRoutes.Schedule.serializer())
-        subclass(NavRoutes.Settings::class, NavRoutes.Settings.serializer())
 
         //settings
+        subclass(NavRoutes.Settings::class, NavRoutes.Settings.serializer())
         subclass(NavRoutes.Profile::class, NavRoutes.Profile.serializer())
         subclass(NavRoutes.ChangePassword::class, NavRoutes.ChangePassword.serializer())
 

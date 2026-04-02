@@ -24,9 +24,11 @@ import com.piyushprajpti.components.FloatingBottomBar
 import com.piyushprajpti.components.LocalBottomBarPadding
 import com.piyushprajpti.core.navigation.NavRoutes
 import com.piyushprajpti.core.navigation.serializableNavModule
+import com.piyushprajpti.feature.attendance.attendanceEntryProvider
 import com.piyushprajpti.feature.auth.authEntryProvider
 import com.piyushprajpti.feature.common.commonEntryProvider
 import com.piyushprajpti.feature.home.homeEntryProvider
+import com.piyushprajpti.feature.schedule.scheduleEntryProvider
 import com.piyushprajpti.feature.settings.settingsEntryProvider
 
 @Composable
@@ -65,12 +67,14 @@ fun Navigation(authState: AuthState) {
             ::commonEntryProvider,
             ::settingsEntryProvider,
             ::homeEntryProvider,
+            ::attendanceEntryProvider,
+            ::scheduleEntryProvider,
 
             )
     }
 
     val bottomBarRoutes = remember {
-        setOf(NavRoutes.Home, NavRoutes.Attendance, NavRoutes.Schedule, NavRoutes.Settings)
+        setOf(NavRoutes.Home, NavRoutes.AttendanceDashboard, NavRoutes.Schedule, NavRoutes.Settings)
     }
     val showBottomBar = currentRoute in bottomBarRoutes
 

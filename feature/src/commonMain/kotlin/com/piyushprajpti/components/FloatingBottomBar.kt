@@ -57,7 +57,7 @@ sealed class BottomBarTab(
     )
 
     data object Attendance : BottomBarTab(
-        route = NavRoutes.Attendance,
+        route = NavRoutes.AttendanceDashboard,
         title = "Attendance",
         icon = Icons.AutoMirrored.Filled.MenuBook
     )
