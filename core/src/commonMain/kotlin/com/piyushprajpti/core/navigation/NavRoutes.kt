@@ -81,6 +81,17 @@ sealed interface NavRoutes : NavKey {
     @Serializable
     data object Result : NavRoutes, NavKey
 
+    // notice
+    @Serializable
+    data object NoticeCreate : NavRoutes, NavKey
+
+    // syllabus
+    @Serializable
+    data object SyllabusCoverage : NavRoutes, NavKey
+
+    @Serializable
+    data object SyllabusPlanner : NavRoutes, NavKey
+
 
 
 

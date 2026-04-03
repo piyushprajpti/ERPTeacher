@@ -7,6 +7,7 @@ import androidx.compose.material.icons.outlined.Description
 import androidx.compose.material.icons.outlined.Event
 import androidx.compose.material.icons.outlined.Grade
 import androidx.compose.material.icons.outlined.HistoryEdu
+import androidx.compose.material.icons.outlined.Info
 import com.piyushprajpti.core.navigation.NavRoutes
 
 data class HomeState(
@@ -71,6 +72,7 @@ enum class QuickAction(
     StudentLeaves("Student Leaves", Icons.AutoMirrored.Outlined.ExitToApp, NavRoutes.StudentLeaveDashboard),
     Exam("Exam", Icons.Outlined.HistoryEdu, NavRoutes.ExamSchedule),
     Result("Result", Icons.Outlined.Grade, NavRoutes.Result),
-    Syllabus("Syllabus", Icons.Outlined.Description, NavRoutes.DocumentList),
+    Notice("Create Notice", Icons.Outlined.Info, NavRoutes.NoticeCreate),
+    Syllabus("Syllabus", Icons.Outlined.Description, NavRoutes.SyllabusCoverage),
     Event("Event", Icons.Outlined.Event, NavRoutes.EventDashboard)
 }

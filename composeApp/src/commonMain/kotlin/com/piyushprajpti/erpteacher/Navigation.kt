@@ -31,10 +31,12 @@ import com.piyushprajpti.feature.common.commonEntryProvider
 import com.piyushprajpti.feature.exam.examEntryProvider
 import com.piyushprajpti.feature.home.homeEntryProvider
 import com.piyushprajpti.feature.my_leave.myLeaveEntryProvider
+import com.piyushprajpti.feature.notice.noticeEntryProvider
 import com.piyushprajpti.feature.result.resultEntryProvider
 import com.piyushprajpti.feature.schedule.scheduleEntryProvider
 import com.piyushprajpti.feature.settings.settingsEntryProvider
 import com.piyushprajpti.feature.student_leave.studentLeaveEntryProvider
+import com.piyushprajpti.feature.syllabus.syllabusEntryProvider
 
 @Composable
 fun Navigation(authState: AuthState) {
@@ -79,6 +81,8 @@ fun Navigation(authState: AuthState) {
             ::myLeaveEntryProvider,
             ::examEntryProvider,
             ::resultEntryProvider,
+            ::noticeEntryProvider,
+            ::syllabusEntryProvider,
 
             )
     }

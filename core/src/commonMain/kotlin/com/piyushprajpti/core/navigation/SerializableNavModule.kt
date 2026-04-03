@@ -50,6 +50,14 @@ val serializableNavModule = SerializersModule {
         // exam
         subclass(NavRoutes.ExamSchedule::class, NavRoutes.ExamSchedule.serializer())
 
+        // notice
+        subclass(NavRoutes.NoticeCreate::class, NavRoutes.NoticeCreate.serializer())
+
+        // syllabus
+        subclass(NavRoutes.SyllabusCoverage::class, NavRoutes.SyllabusCoverage.serializer())
+        subclass(NavRoutes.SyllabusPlanner::class, NavRoutes.SyllabusPlanner.serializer())
+
+
 
 
         // fees

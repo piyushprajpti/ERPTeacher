@@ -14,12 +14,15 @@ import com.piyushprajpti.feature.home.notifications.NotificationViewModel
 import com.piyushprajpti.feature.home.root.HomeViewModel
 import com.piyushprajpti.feature.leave.leave_apply.MyLeaveApplyViewModel
 import com.piyushprajpti.feature.my_leave.balance.MyLeaveBalanceViewModel
+import com.piyushprajpti.feature.notice.create.NoticeCreateViewModel
 import com.piyushprajpti.feature.result.ResultViewModel
 import com.piyushprajpti.feature.schedule.ScheduleViewModel
 import com.piyushprajpti.feature.settings.change_password.ChangePasswordViewModel
 import com.piyushprajpti.feature.settings.profile.ProfileViewModel
 import com.piyushprajpti.feature.settings.root.SettingsViewModel
 import com.piyushprajpti.feature.student_leave.dashboard.StudentLeaveDashboardViewModel
+import com.piyushprajpti.feature.syllabus.coverage.SyllabusCoverageViewModel
+import com.piyushprajpti.feature.syllabus.planner.SyllabusPlannerViewModel
 import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.module
 
@@ -65,4 +68,11 @@ val featureModule = module {
 
     // result
     viewModelOf(::ResultViewModel)
+
+    // notice
+    viewModelOf(::NoticeCreateViewModel)
+
+    // syllabus
+    viewModelOf(::SyllabusCoverageViewModel)
+    viewModelOf(::SyllabusPlannerViewModel)
 }
