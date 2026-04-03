@@ -28,8 +28,12 @@ import com.piyushprajpti.feature.assignment.assignmentEntryProvider
 import com.piyushprajpti.feature.attendance.attendanceEntryProvider
 import com.piyushprajpti.feature.auth.authEntryProvider
 import com.piyushprajpti.feature.common.commonEntryProvider
+import com.piyushprajpti.feature.documents.documentEntryProvider
+import com.piyushprajpti.feature.events.eventEntryProvider
 import com.piyushprajpti.feature.exam.examEntryProvider
 import com.piyushprajpti.feature.home.homeEntryProvider
+import com.piyushprajpti.feature.hostel.hostelEntryProvider
+import com.piyushprajpti.feature.library.libraryEntryProvider
 import com.piyushprajpti.feature.my_leave.myLeaveEntryProvider
 import com.piyushprajpti.feature.notice.noticeEntryProvider
 import com.piyushprajpti.feature.result.resultEntryProvider
@@ -37,6 +41,7 @@ import com.piyushprajpti.feature.schedule.scheduleEntryProvider
 import com.piyushprajpti.feature.settings.settingsEntryProvider
 import com.piyushprajpti.feature.student_leave.studentLeaveEntryProvider
 import com.piyushprajpti.feature.syllabus.syllabusEntryProvider
+import com.piyushprajpti.feature.transport.transportEntryProvider
 
 @Composable
 fun Navigation(authState: AuthState) {
@@ -83,7 +88,11 @@ fun Navigation(authState: AuthState) {
             ::resultEntryProvider,
             ::noticeEntryProvider,
             ::syllabusEntryProvider,
-
+            ::hostelEntryProvider,
+            ::documentEntryProvider,
+            ::libraryEntryProvider,
+            ::transportEntryProvider,
+            ::eventEntryProvider
             )
     }
 

@@ -92,19 +92,18 @@ sealed interface NavRoutes : NavKey {
     @Serializable
     data object SyllabusPlanner : NavRoutes, NavKey
 
-
-
-
-
-    // fees
+    // hostel
     @Serializable
-    data object FeesSummary : NavRoutes, NavKey
+    data object HostelDashboard : NavRoutes, NavKey
 
     @Serializable
-    data object FeesPayment : NavRoutes, NavKey
+    data object HostelMess : NavRoutes, NavKey
 
     @Serializable
-    data object FeesHistory : NavRoutes, NavKey
+    data object HostelGatePass : NavRoutes, NavKey
+
+    @Serializable
+    data object HostelComplaint : NavRoutes, NavKey
 
     // library
     @Serializable
@@ -126,29 +125,6 @@ sealed interface NavRoutes : NavKey {
 
     @Serializable
     data object DocumentRequest : NavRoutes, NavKey
-
-    // marks
-    @Serializable
-    data object MarksOverview : NavRoutes, NavKey
-
-    @Serializable
-    data object GradeCard : NavRoutes, NavKey
-
-    @Serializable
-    data object ExamHallTicket : NavRoutes, NavKey
-
-    // hostel
-    @Serializable
-    data object HostelDashboard : NavRoutes, NavKey
-
-    @Serializable
-    data object HostelMess : NavRoutes, NavKey
-
-    @Serializable
-    data object HostelGatePass : NavRoutes, NavKey
-
-    @Serializable
-    data object HostelComplaint : NavRoutes, NavKey
 
     // events
     @Serializable

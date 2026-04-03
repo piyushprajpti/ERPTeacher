@@ -65,7 +65,7 @@ fun QuickActionItem(
                 .size(56.dp)
                 .clip(RoundedCornerShape(16.dp))
                 .background(CustomTheme.colors.secondaryBackground)
-                .border(0.5.dp, CustomTheme.colors.outline, RoundedCornerShape(16.dp))
+                .border(1.dp, CustomTheme.colors.outline, RoundedCornerShape(16.dp))
                 .clickable { onClick() },
             contentAlignment = Alignment.Center
         ) {

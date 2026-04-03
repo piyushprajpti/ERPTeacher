@@ -57,13 +57,11 @@ val serializableNavModule = SerializersModule {
         subclass(NavRoutes.SyllabusCoverage::class, NavRoutes.SyllabusCoverage.serializer())
         subclass(NavRoutes.SyllabusPlanner::class, NavRoutes.SyllabusPlanner.serializer())
 
-
-
-
-        // fees
-        subclass(NavRoutes.FeesSummary::class, NavRoutes.FeesSummary.serializer())
-        subclass(NavRoutes.FeesPayment::class, NavRoutes.FeesPayment.serializer())
-        subclass(NavRoutes.FeesHistory::class, NavRoutes.FeesHistory.serializer())
+        // hostel
+        subclass(NavRoutes.HostelDashboard::class, NavRoutes.HostelDashboard.serializer())
+        subclass(NavRoutes.HostelMess::class, NavRoutes.HostelMess.serializer())
+        subclass(NavRoutes.HostelGatePass::class, NavRoutes.HostelGatePass.serializer())
+        subclass(NavRoutes.HostelComplaint::class, NavRoutes.HostelComplaint.serializer())
 
         // library
         subclass(NavRoutes.LibraryDashboard::class, NavRoutes.LibraryDashboard.serializer())
@@ -75,23 +73,9 @@ val serializableNavModule = SerializersModule {
         subclass(NavRoutes.DocumentList::class, NavRoutes.DocumentList.serializer())
         subclass(NavRoutes.DocumentRequest::class, NavRoutes.DocumentRequest.serializer())
 
-        // marks
-        subclass(NavRoutes.MarksOverview::class, NavRoutes.MarksOverview.serializer())
-        subclass(NavRoutes.GradeCard::class, NavRoutes.GradeCard.serializer())
-
-        // exam
-        subclass(NavRoutes.ExamHallTicket::class, NavRoutes.ExamHallTicket.serializer())
-
-        // hostel
-        subclass(NavRoutes.HostelDashboard::class, NavRoutes.HostelDashboard.serializer())
-        subclass(NavRoutes.HostelMess::class, NavRoutes.HostelMess.serializer())
-        subclass(NavRoutes.HostelGatePass::class, NavRoutes.HostelGatePass.serializer())
-        subclass(NavRoutes.HostelComplaint::class, NavRoutes.HostelComplaint.serializer())
-
         // events
         subclass(NavRoutes.EventDashboard::class, NavRoutes.EventDashboard.serializer())
         subclass(NavRoutes.EventDetail::class, NavRoutes.EventDetail.serializer())
-
 
         // transport
         subclass(NavRoutes.TransportDashboard::class, NavRoutes.TransportDashboard.serializer())

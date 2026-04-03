@@ -9,10 +9,22 @@ import com.piyushprajpti.feature.auth.login.LoginViewModel
 import com.piyushprajpti.feature.auth.tenant.TenantViewModel
 import com.piyushprajpti.feature.common.reset_password.ResetPasswordViewModel
 import com.piyushprajpti.feature.common.support.SupportViewModel
+import com.piyushprajpti.feature.documents.list.DocumentListViewModel
+import com.piyushprajpti.feature.documents.request.DocumentRequestViewModel
+import com.piyushprajpti.feature.events.dashboard.EventDashboardViewModel
+import com.piyushprajpti.feature.events.detail.EventDetailViewModel
 import com.piyushprajpti.feature.exam.ExamScheduleViewModel
 import com.piyushprajpti.feature.home.notifications.NotificationViewModel
 import com.piyushprajpti.feature.home.root.HomeViewModel
+import com.piyushprajpti.feature.hostel.complaints.HostelComplaintViewModel
+import com.piyushprajpti.feature.hostel.dashboard.HostelDashboardViewModel
+import com.piyushprajpti.feature.hostel.gate_pass.HostelGatePassViewModel
+import com.piyushprajpti.feature.hostel.mess.HostelMessViewModel
 import com.piyushprajpti.feature.leave.leave_apply.MyLeaveApplyViewModel
+import com.piyushprajpti.feature.library.book_detail.LibraryBookDetailViewModel
+import com.piyushprajpti.feature.library.dashboard.LibraryDashboardViewModel
+import com.piyushprajpti.feature.library.due_and_fines.LibraryDueViewModel
+import com.piyushprajpti.feature.library.search.LibrarySearchViewModel
 import com.piyushprajpti.feature.my_leave.balance.MyLeaveBalanceViewModel
 import com.piyushprajpti.feature.notice.create.NoticeCreateViewModel
 import com.piyushprajpti.feature.result.ResultViewModel
@@ -23,6 +35,8 @@ import com.piyushprajpti.feature.settings.root.SettingsViewModel
 import com.piyushprajpti.feature.student_leave.dashboard.StudentLeaveDashboardViewModel
 import com.piyushprajpti.feature.syllabus.coverage.SyllabusCoverageViewModel
 import com.piyushprajpti.feature.syllabus.planner.SyllabusPlannerViewModel
+import com.piyushprajpti.feature.transport.dashboard.TransportDashboardViewModel
+import com.piyushprajpti.feature.transport.tracking.TransportTrackingViewModel
 import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.module
 
@@ -75,4 +89,28 @@ val featureModule = module {
     // syllabus
     viewModelOf(::SyllabusCoverageViewModel)
     viewModelOf(::SyllabusPlannerViewModel)
+
+    // library
+    viewModelOf(::LibraryDashboardViewModel)
+    viewModelOf(::LibrarySearchViewModel)
+    viewModelOf(::LibraryBookDetailViewModel)
+    viewModelOf(::LibraryDueViewModel)
+
+    // document
+    viewModelOf(::DocumentListViewModel)
+    viewModelOf(::DocumentRequestViewModel)
+
+    // hostel
+    viewModelOf(::HostelDashboardViewModel)
+    viewModelOf(::HostelComplaintViewModel)
+    viewModelOf(::HostelGatePassViewModel)
+    viewModelOf(::HostelMessViewModel)
+
+    // events
+    viewModelOf(::EventDashboardViewModel)
+    viewModelOf(::EventDetailViewModel)
+
+    // transport
+    viewModelOf(::TransportDashboardViewModel)
+    viewModelOf(::TransportTrackingViewModel)
 }

@@ -3,6 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:name=".ERPApplication"
@@ -14,6 +16,11 @@
         android:enableOnBackInvokedCallback="true"
         android:theme="@style/Theme.App.Starting"
         tools:targetApi="33">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDBszU32FIj6O6zOiQH6MRQ0kevLAWT29U" />
+
         <activity
             android:exported="true"
             android:name=".MainActivity">

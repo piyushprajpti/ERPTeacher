@@ -3,11 +3,14 @@ package com.piyushprajpti.feature.home.root
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.Assignment
 import androidx.compose.material.icons.automirrored.outlined.ExitToApp
+import androidx.compose.material.icons.automirrored.outlined.LibraryBooks
 import androidx.compose.material.icons.outlined.Description
 import androidx.compose.material.icons.outlined.Event
 import androidx.compose.material.icons.outlined.Grade
 import androidx.compose.material.icons.outlined.HistoryEdu
+import androidx.compose.material.icons.outlined.HomeWork
 import androidx.compose.material.icons.outlined.Info
+import androidx.compose.material.icons.outlined.School
 import com.piyushprajpti.core.navigation.NavRoutes
 
 data class HomeState(
@@ -74,5 +77,10 @@ enum class QuickAction(
     Result("Result", Icons.Outlined.Grade, NavRoutes.Result),
     Notice("Create Notice", Icons.Outlined.Info, NavRoutes.NoticeCreate),
     Syllabus("Syllabus", Icons.Outlined.Description, NavRoutes.SyllabusCoverage),
-    Event("Event", Icons.Outlined.Event, NavRoutes.EventDashboard)
+    Transport("Transport", Icons.Outlined.School, NavRoutes.TransportDashboard),
+    Hostel("Hostel", Icons.Outlined.HomeWork, NavRoutes.HostelDashboard),
+    Events("Events", Icons.Outlined.Event, NavRoutes.EventDashboard),
+    Library("Library", Icons.AutoMirrored.Outlined.LibraryBooks, NavRoutes.LibraryDashboard),
+    Documents("Documents", Icons.Outlined.Description, NavRoutes.DocumentList),
+
 }
