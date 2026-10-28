@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.material3.darkColorScheme
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -15,7 +16,10 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         val splashScreen = installSplashScreen()
+
         super.onCreate(savedInstanceState)
+
+        enableEdgeToEdge()
 
         splashScreen.setKeepOnScreenCondition {
             viewModel.authState.value is AuthState.Loading

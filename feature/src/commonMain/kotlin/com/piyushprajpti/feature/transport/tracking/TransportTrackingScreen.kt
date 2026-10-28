@@ -88,6 +88,7 @@ private fun TrackingMapLayer(
 
     TrackingMap(
         state = state,
+        cameraEvents = viewModel.cameraEvents,
         onZoomIn = onZoomIn,
         onZoomOut = onZoomOut,
         onMyLocation = onMyLocation

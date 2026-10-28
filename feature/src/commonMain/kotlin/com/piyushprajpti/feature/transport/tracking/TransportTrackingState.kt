@@ -14,6 +14,7 @@ data class TransportTrackingState(
     val collegeLocation: Location = Location(0.0, 0.0),
     val busLocation: Location = Location(0.0, 0.0),
     val userLocation: Location = Location(0.0, 0.0),
+    val routePath: List<Location> = emptyList(),
     val cameraTrigger: CameraTrigger? = null,
     val isLocationPermissionGranted: Boolean = false
 )
@@ -23,8 +24,11 @@ data class Location(
     val longitude: Double
 )
 
-sealed class CameraTrigger {
-    data object ZoomIn : CameraTrigger()
-    data object ZoomOut : CameraTrigger()
-    data object FocusMyLocation : CameraTrigger()
+sealed interface CameraAction {
+    data object ZoomIn : CameraAction
+    data object ZoomOut : CameraAction
+    data object FocusMyLocation : CameraAction
 }
+
+typealias CameraTrigger = CameraAction
+

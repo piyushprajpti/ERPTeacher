@@ -51,6 +51,7 @@ kotlin {
 
             implementation(libs.kermit)
 
+            implementation(libs.material.icons.extended)
             implementation(libs.androidx.lifecycle.viewmodel.navigation3)
             implementation(libs.jetbrains.navigation3.ui)
 
