@@ -8,7 +8,7 @@
 
 Recruiters and reviewers can test the application directly using the pre-built APK:
 
-![Download APK](https://drive.google.com/file/d/1zw5ykuEcBl-BI_-KiFgpGjkKWDX0cylw/view?usp=sharing)
+[![Download APK](https://img.shields.io/badge/Download_Android_APK-Google_Drive-34A853?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/file/d/1zw5ykuEcBl-BI_-KiFgpGjkKWDX0cylw/view?usp=sharing)
 
 ### 🔑 Demo Login Credentials
 
